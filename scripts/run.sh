@@ -1,3 +1,3 @@
 source .venv/bin/activate
-python main.py &
+python ../backend/main.py &
 streamlit run ../frontend/app.py
