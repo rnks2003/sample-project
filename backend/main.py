@@ -12,5 +12,11 @@ def service():
 def ping():
     return {'ok': True, 'timestamp': datetime.utcnow()}
 
+@app.post("/predict")
+def predict(request: dict):
+    # Placeholder for prediction logic
+    print(request)
+    return {'diagnosis': 'benign', 'confidence': 0.95}
+
 if __name__ == "__main__":
     uvicorn.run(app, host='0.0.0.0', port=8000)
